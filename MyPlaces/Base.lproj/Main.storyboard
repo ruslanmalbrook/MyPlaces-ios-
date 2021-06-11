@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--MyPlaces-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MyPlaces" customModuleProvider="target" sceneMemberID="viewController">
@@ -44,7 +44,7 @@
                             <constraint firstItem="FpH-W3-Djx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="sq7-aM-KVP"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="uu0-pl-vLm"/>
+                    <navigationItem key="navigationItem" title="MyPlaces" id="uu0-pl-vLm"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -58,6 +58,9 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="3sZ-uj-wJY">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="35"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
