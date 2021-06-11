@@ -13,6 +13,7 @@
 		DBFBF133266FC9CC0097CACA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBFBF131266FC9CC0097CACA /* Main.storyboard */; };
 		DBFBF135266FC9CE0097CACA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBFBF134266FC9CE0097CACA /* Assets.xcassets */; };
 		DBFBF138266FC9CE0097CACA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBFBF136266FC9CE0097CACA /* LaunchScreen.storyboard */; };
+		DBFBF14026731A6D0097CACA /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFBF13F26731A6D0097CACA /* CustomTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		DBFBF134266FC9CE0097CACA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DBFBF137266FC9CE0097CACA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DBFBF139266FC9CE0097CACA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DBFBF13F26731A6D0097CACA /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				DBFBF12B266FC9CC0097CACA /* AppDelegate.swift */,
 				DBFBF12D266FC9CC0097CACA /* SceneDelegate.swift */,
 				DBFBF12F266FC9CC0097CACA /* ViewController.swift */,
+				DBFBF13F26731A6D0097CACA /* CustomTableViewCell.swift */,
 				DBFBF131266FC9CC0097CACA /* Main.storyboard */,
 				DBFBF134266FC9CE0097CACA /* Assets.xcassets */,
 				DBFBF136266FC9CE0097CACA /* LaunchScreen.storyboard */,
@@ -139,6 +142,7 @@
 			files = (
 				DBFBF130266FC9CC0097CACA /* ViewController.swift in Sources */,
 				DBFBF12C266FC9CC0097CACA /* AppDelegate.swift in Sources */,
+				DBFBF14026731A6D0097CACA /* CustomTableViewCell.swift in Sources */,
 				DBFBF12E266FC9CC0097CACA /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
