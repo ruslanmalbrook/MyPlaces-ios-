@@ -11,8 +11,6 @@ import RealmSwift
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
-
     // MARK: UISceneSession Lifecycle
 
     func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
@@ -29,10 +27,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
         
+        let schemaVersion: UInt64 = 2
+        
         let config = Realm.Configuration(
-            schemaVersion: 1, // Set the new schema version.
+            schemaVersion: schemaVersion, // Set the new schema version.
             migrationBlock: { migration, oldSchemaVersion in
-                if oldSchemaVersion < 1 {
+                if oldSchemaVersion < schemaVersion {
                     
                 }
             })

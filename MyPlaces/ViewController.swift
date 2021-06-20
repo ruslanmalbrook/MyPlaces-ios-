@@ -9,8 +9,6 @@ import UIKit
 import RealmSwift
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-    
-    //    let rowHeight: CGFloat = 85
         
     //    var places = Place.getPlaces()
     private var places: Results<Place>!
@@ -64,8 +62,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         } else {
             place = places[indexPath.row]
         }
-        
-//        let place = places[indexPath.row]
 
         cell.nameLabel.text = place.name
         cell.locationLabel.text = place.location
@@ -94,6 +90,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 //        return UISwipeActionsConfiguration(actions: [deleteAction])
 //    }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         
         if editingStyle == .delete {
@@ -106,7 +106,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
 
 //    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        return rowHeight
+//        return 85
 //    }
     
     @IBAction func unwindSeque(_ seque: UIStoryboardSegue) {
