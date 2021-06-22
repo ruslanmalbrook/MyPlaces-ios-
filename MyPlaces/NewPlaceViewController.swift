@@ -34,8 +34,12 @@ class NewPlaceViewController: UITableViewController {
                                                          height: 1))
         saveBtn.isEnabled = false
         placeName.addTarget(self, action: #selector(textFieldChanged), for: UIControl.Event.editingChanged)
-        
         setupEditScreen()
+        
+//        cosmosView.settings.fillMode = .half
+//        cosmosView.didTouchCosmos = { rating in
+//            print("\(rating)")
+//        }
     }
     
     //MARK: - TableViewDelegate
@@ -73,15 +77,21 @@ class NewPlaceViewController: UITableViewController {
             view.endEditing(true)
         }
     }
+    
+    //MARK: - Navigation
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier != "openMapSegue" { return }
+        
+        let mapVC = segue.destination as! MapViewController
+        mapVC.place.name = placeName.text!
+        mapVC.place.location = placeLocation.text
+        mapVC.place.type = placeType.text
+        mapVC.place.imageData = placeImage.image?.pngData()
+    }
 
     func savePlace() {
-        var image: UIImage?
-        
-        if !imageIsChanged {
-            image = UIImage(named: "imagePlaceholder")
-        } else {
-            image = placeImage.image
-        }
+        let image = !imageIsChanged ? #imageLiteral(resourceName: "imagePlaceholder") : placeImage.image
         
         let newPlace = Place(name: placeName.text!,
                              location: placeLocation.text,
